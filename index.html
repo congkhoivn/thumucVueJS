@@ -4,14 +4,38 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> VueJS</title>
-        <link rel="stylesheet" href="./style.css"
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
+    
+        <style>
+          .box{
+            width:100px;
+            height:100px;
+            background-color:purple;
+          }  
+        </style>
     </head>
-    <body>     
-        9999       
+    <body>            
         <div id="map">
-            <p> {{title}}</p>
+            <p>{{dt1}}</p>
+            <p>{{dt2}}</p>
+            <p>{{title}}</p>
         </div>
+        <div class="dulieu">
+            <p>Counts {{count}}</p>
+            <button v-on:click="handleClick(8)"> Click đi</button>
+            <div class="box" v-on:mousemove="handleMouseMove">
+                <p> ClientX: {{clientX}}</p>
+                <p>ClientY: {{clientY}}</p>
+            </div>
+            <form action ="./php"v-on:submit.prevent="hana">
+                <label> Nhập tên </label>
+                <input type="test" name="fristName"><br>
+                <label> Nhập email</label>
+                <input type="email" name="email"> <br>
+                <input type="submit" value="Dangnhap">
+            </form>
+        </div>
+       
     </body>
     <script src="main.js"></script>
 </html>
