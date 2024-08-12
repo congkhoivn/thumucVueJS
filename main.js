@@ -2,9 +2,8 @@
   var vm = new Vue({
     el:'#map',
     data:{
-        title: 'dien thoai Ịphone'
+        title: 'dien thoai Isphone'
     },
-    
   });
   console.log(vm);
 
