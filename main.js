@@ -35,3 +35,81 @@ var click= new Vue({
   }
 }
 );
+/*Bài 2*/
+var computed = new Vue({
+  el:'#computed',
+  data:{
+    message: 'Hello world',
+    a: 0,
+    b: 0,
+    number: 20
+  },
+  methods:{
+    reversedMessage:function(){
+      return this.message.split('').reverse().join('')
+    },
+    
+  } ,
+  computed:{
+    addA() {
+      console.log('addA run');
+      return this.a + this.number
+    },
+    addB() {
+      console.log('addB run');
+      return this.b + this.number
+    }
+  }
+});
+/*Ràng buộc dữ liệu 2 chiều*/
+var dulieu = new Vue({
+  el:'.fname',
+  data:{
+    fristName: '',
+    about: ''
+  },
+  methods:{
+
+  }
+}
+);
+/* Ràng buộc class bằng VueJS*/
+var ddemo = new Vue({
+  el:'#demau',
+  data:{
+    lophoc:'QLBD',
+    isActive: false,
+    isError: true
+  },
+  methods:{
+    changeActive(){
+      this.isActive = !this.isActive
+    },
+    changeError(){
+      this.isError = !this.isError
+    }
+  },
+  computed:{
+    objClass: function(){
+      return{
+        active: this.isActive,
+        error: this.isError
+      }
+    }
+  }
+}
+);
+/*Render Template dùng biểu thức điều kiện*/
+var app1= new Vue({
+  el:'#app1',
+  data:{
+    tabSelected: 'login'
+  },
+  methods:{
+    changetabs(tab){
+      this.tabSelected = tab;
+    }
+  }
+});
+
+/*Render Template dùng biểu thức điều kiện*/

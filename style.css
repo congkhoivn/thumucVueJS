@@ -1,0 +1,52 @@
+.box{
+    width:100px;
+    height:100px;
+    background-color:rgb(0, 128, 53);
+  }  
+.container{
+   text-align: center;
+  margin: 100px;
+  
+}
+.bai2{
+    text-align: center;
+    color: darkgoldenrod;
+}
+.n1{
+    text-align: center;
+    color: rgb(29, 30, 124);
+}
+.demo{
+    text-align: center;
+    width: 120px;
+    height: 60px;
+    background-color: aqua;
+}
+.demo.error{
+    background-color: rgb(247, 0, 255);
+}
+.demo.active{
+    background-color: blueviolet;
+}
+.tabs{
+   margin: 50px;
+   padding: 0px;
+}
+.tabs li{
+    
+    display: inline-block;
+    padding: 30px;
+    background-color: burlywood;
+    width: 100px;
+    border-radius: 120px;
+}
+.login, .register{
+    width: 250px;
+    height: 120px;
+    padding: 20px 380px;
+}
+#app1{
+    border: 240px ;
+    background-color: rgb(228, 210, 189);
+    
+}

@@ -5,16 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> VueJS</title>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
-    
-        <style>
-          .box{
-            width:100px;
-            height:100px;
-            background-color:purple;
-          }  
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>            
+    <body> 
+ <div class="container">
+        <h1 class="n1"> Bài 1</h1>        
         <div id="map">
             <p>{{dt1}}</p>
             <p>{{dt2}}</p>
@@ -34,8 +29,64 @@
                 <input type="email" name="email"> <br>
                 <input type="submit" value="Dangnhap">
             </form>
+        </div><hr>
+
+
+       <h1 class="n1"> Bài 2 </h1>
+       <div>
+            <h3 class="bai2"> Computed</h3>
+             <div id="computed">
+                <p> {{message}}</p>
+                <p>{{reversedMessage()}}</p>
+                <button v-on:click="a++"> A = A+1</button>
+                <button v-on:click="b++"> B = B+1</button>
+                <p> Number + A = {{ addA }}</p>
+                <p> Number + B = {{ addB}}</p>
+              </div>
+
+
+             <h3 class="bai2"> Ràng buộc dữ liệu 2 chiều</h3>
+                <div class="fname">
+                    <p> fristName ={{fristName}}</p>
+                    <p>  {{about}}</p>
+                    <input v-model="fristName" type="text" placeholder="Nhap ten">
+                    <textarea v-model="about" cols="20" rows="10"></textarea>
+                </div>
+            <h3 class="bai2"> Ràng buộc Class = VueJS</h3>
+            <div id="demau">
+                <button v-on:click="changeActive"> changeActive </button>
+                <button v-on:click="changeError"> changeError </button>
+                 <div class="demo" v-bind:class="objClass">
+                     <p> {{lophoc}}</p>
+                </div>
+            </div>
+
+
+            <h3 class="bai2"> Render Template dùng biểu thức điều kiện </h3>
+                <div id="app1">
+                    <div class="login" v-if="tabSelected === 'login'">
+                        <h2> Form Đăng nhập</h2>
+                        <form action="">
+                            <input type="text" placeholder="nhap username">
+                            <input type="password" placeholder="nhap password">
+                        </form>
+                    </div>
+                    <div class="register" v-else-if="tabSelected === 'register'">
+                        <h2> Form Đăng ký</h2>
+                        <form action="">
+                            <input type="text" placeholder="nhap username">
+                            <input type="password" placeholder="nhap password">
+                            <input type="password" placeholder="nhap lai password">
+                        </form>
+                    </div>
+                    <ul class="tabs">
+                        <li v-on:click="changetabs('login')"> Đăng nhập </li>
+                        <li v-on:click="changetabs('register')"> Đăng ký </li>
+                    </ul>
+                </div>
+                <h3 class="bai2"> Render Template dùng biểu thức điều kiện </h3>
         </div>
-       
+       </div>
     </body>
     <script src="main.js"></script>
 </html>
